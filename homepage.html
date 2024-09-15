@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page With Light/Dark Mode</title>
+    <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+    <main>
+        <div class="big-wrapper light">
+
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <h3>Fruit.ai</h3>
+                        <div class="links">
+                            <ul>
+                                <li><a href="./chat/chat.html">Chat</a></li>
+                                <li><a href="./translate.html">Translator</a></li>
+                                <li><a href="#" class="faq-btn">FAQ</a></li> <!-- FAQ button updated -->
+                                <li><a href="#" class="about-btn">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="showcase-area">
+                <div class="container">
+                    <div class="left">
+                        <div class="big-title">
+                            <h2>Manage Your Health with</h2>
+                            <h1>Fruit.ai</h1>
+                        </div>
+                        <p class="text">
+                            Be Healthy!
+                        </p>
+                    </div>
+
+                    <div class="panel-container">
+                        <div class="panel right-panel">
+                            <img src="./img/fruit.png" alt="Health Panel Image" class="panel-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section (Initially hidden) -->
+        <div class="faq-section hidden">
+            <span style="color: #000; top: 10px; margin-left: 85vw; font-size: 1.5rem;cursor: pointer; " class="close">&times;</span>
+            <h2>FaQ Section</h2>
+            <ul class="faq-list">
+                <li><strong>What is Fruit.ai?</strong><br>Fruit.ai is an AI-driven chatbot that helps you manage your health through personalized fruit recommendations.</li>
+                <li><strong>How does Fruit.ai work?</strong><br>It provides suggestions based on your health preferences and dietary requirements.</li>
+                <li><strong>Is Fruit.ai free to use?</strong><br>Yes, the basic features are free.</li>
+                <li><strong>Can I customize my fruit recommendations?</strong><br>Yes, you can customize the recommendations based on your personal health goals.</li>
+            </ul>
+            <form id="faq-form">
+                <input type="text" id="question"  class = "input-field" placeholder="Enter your question" required  />
+                <input type="text" id="answer" class="input-field" placeholder="Enter the answer" required />
+                <button type="submit" class="buttn">Add FAQ</button>
+            </form>
+    
+            <!-- FAQ list -->
+            <ul class="faq-list"></ul>
+    
+            <!-- Form to update an FAQ -->
+            <div id="update-form" style="display: none;">
+                <input type="hidden" id="update-id" />
+                <input type="text" id="update-question" placeholder="Enter your question" required />
+                <input type="text" id="update-answer" placeholder="Enter the answer" required />
+                <button id="update-btn">Update FAQ</button>
+            </div>
+        </div>
+
+        <div class="about-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Fruit.ai</h2><br>
+                <p>Whether you're looking to discover new fruits, understand their nutritional values, or find the
+                    perfect fruit for your diet, our AI-driven chatbot is here to assist. We provide personalized fruit
+                    recommendations tailored to your health needs, making it easier for you to integrate the best fruits
+                    into your daily routine.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./homepage.js"></script>
+</body>
+
+</html>
